@@ -17,8 +17,3 @@ public class SwagLabsCartCountTest extends SwagSettings {
         Assert.assertEquals("1", cartCount);
     }
 }
-
-
-
-
-

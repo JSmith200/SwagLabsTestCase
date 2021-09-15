@@ -17,8 +17,3 @@ public class SwagLabsSortingByTest extends SwagSettings {
         Assert.assertEquals("PRICE (LOW TO HIGH)", sortingBy);
     }
 }
-
-
-
-
-

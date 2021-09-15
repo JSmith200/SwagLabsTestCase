@@ -18,7 +18,6 @@ public class SwagSettings {
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
     }
-
     @After
     public void close() {
         driver.quit();
