@@ -2,10 +2,10 @@ package SwagLabs;
 
 import org.junit.After;
 import org.junit.Before;
-import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
-public class SwagSettings {
+public class SwagGlobalSettings {
 
     public ChromeDriver driver;
 
@@ -13,14 +13,15 @@ public class SwagSettings {
     public void setUp() {
         System.out.println("test start");
         System.setProperty("webdriver.chrome.driver", "/chromedriver.exe");
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        driver = new ChromeDriver(options.addArguments("--headless"));
         driver.get("https://www.saucedemo.com");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
     }
+
     @After
     public void close() {
         driver.quit();
         System.out.println("test close");
     }
+
 }
